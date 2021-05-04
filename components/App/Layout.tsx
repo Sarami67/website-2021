@@ -21,7 +21,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: linear-gradient(#d4fffd, #ffe4bf) no-repeat;
+    background: linear-gradient(#11faee, #ffe4bf) no-repeat;
     min-height: 100vh;
   }
 
