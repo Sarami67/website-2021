@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FC } from 'react';
 import AutoSlideShow from "./auto-slide-show";
-import { entrance, info1, info2, info3, info4, info5, info6, info7, info8, info9, info10} from "../scripts/content1";
+import { info1, info2, info3, info4, info5, info6, info7, info8, info9, info10} from "../scripts/content1";
 
 const Content1:FC = () => {
   const HexagonTitleProperties={
@@ -36,18 +36,6 @@ const Content1:FC = () => {
 
   return (
     <div>
-      {entrance.map(
-        ({ title}) => <Title>{title}</Title>
-      )}
-
-      {entrance.map(
-        ({ date1, date2, date3 }) =>
-          <DataUl>
-            <Date>{date1}</Date>
-            <Date>{date2}</Date>
-            <Date>{date3}</Date>
-          </DataUl>
-      )}
       <AutoSlideShow></AutoSlideShow>
       <HexagonContent></HexagonContent>
         {info1.map(({ title, detail1, detail2}) =>
@@ -95,7 +83,7 @@ const Content1:FC = () => {
 export default Content1;
 
 
-const DataUl = styled.ul`
+const DataUl = styled.ul` 
   position: absolute;
   padding-left: 55vw; 
   padding-top: 30vw;
@@ -118,9 +106,10 @@ const Date = styled.li`
   color: cyan;
 `;
 
-const Info = styled.p`
+const Info = styled.p<InfoType>`
 z-index: 5;
-text-align:${props => props.inputTextalign || ""};
+text-align:${
+props => props.inputTextalign || ""};
 font-size: ${props => props.inputFontsize || "20px"};
 margin: ${props => props.inputMargin || "1.5rem 0 0 1.5rem"};
 color: ${props => props.inputColor || "black"};
@@ -134,7 +123,7 @@ transform:${props => props.inputTransform || "rotate(10deg)"};
 
 `;
 
- const HexagonContent = styled.div`
+ const HexagonContent = styled.div<HexagonContentType>`
    height: 250px;
   width: 250px;
   @media screen and (max-width:767px) { 
@@ -153,7 +142,7 @@ transform:${props => props.inputTransform || "rotate(10deg)"};
    position: ${props => props.inputPosition || "absolute"};
  `;
 
-const Hexagon = styled.div`
+ const Hexagon = styled.div<HexagonType>`
 opacity: 0.8;
   height: 150px;
   width: 150px;
@@ -168,3 +157,24 @@ opacity: 0.8;
     position:  absolute;
     transform:  ${props => props.inputTransform ||  "rotate(-10deg)"}; 
 `;
+type InfoType = {
+  inputTextalign: string
+  inputFontsize: string
+  inputMargin: string
+  inputColor: string
+  inputLineheight: string
+  inputTransform: string
+  inputMediaFontsize: string
+  inputMediaMergin: string
+  inputMediaLineheight: string
+}
+type HexagonContentType = {
+  inputMargin: string
+  inputPosition: string
+}
+type HexagonType = {
+  inputBackground: string
+  inputMargin: string
+  inputZindex: string
+  inputtransform: string
+}
