@@ -1,12 +1,11 @@
 export type Slide = {
-    title: string,
     date1: string,
     date2: string,
     date3: string,
 }
 
 export const entrance: Slide[] = [
-    {title: 'TOHOFES 70th', date1: '６月５日（土曜日）', date2: '６月６日（日曜日）', date3: '６月７日（月曜日）',}
+    { date1: '６月５日（土曜日）', date2: '６月６日（日曜日）', date3: '６月７日（月曜日）',}
 ]
 
 export type ContentInfo = {
