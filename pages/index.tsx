@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-
-const Entrance: FC = () => <div>Welcome to Toho Festival 2021!</div>;
+import Content1 from '../components/content1'
+const Entrance: FC = () => <Content1></Content1>;
 
 export default Entrance;
 
