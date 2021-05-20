@@ -5,7 +5,7 @@ interface InputTitle  {
 }
 
 
-export const Underline = styled.h1 `
+export const Underline = styled.span `
 &::after {
     content: "";
     display: block;
