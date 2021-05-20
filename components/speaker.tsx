@@ -15,6 +15,7 @@ const Speaker:FC = () => {
                 <BackgroundImage src="/speakerbackground.png"></BackgroundImage>                   
                 <div> 
                     <ImageSpeaker src="../public/speaker.png"></ImageSpeaker>
+                    {/* <ImageSpeaker src="../public/speaker.png"></ImageSpeaker> */}
                   <SpeakerDetail>東京港区六本木生まれ六本木育ち，六本木中学卒業 , 開成高校
                                         卒業 , 筑波大学情報学群情報メディア創成学類卒業，東京大学
                                         大学院学際情報学府博士課程早期終了．計算機自然という新た
