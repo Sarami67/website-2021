@@ -69,6 +69,7 @@ border-radius:20px;
 border: solid 10px white;
 background-color: white;
 margin: 0 50px 10px 70px;
+padding: 3px 3px 3px 3px;
 `
 
 export default Blog;
