@@ -4,7 +4,7 @@ const Speaker:FC = () => {
     return(
         <BackGround> 
                 <Position>
-                    <Square inputWidth="18vw" inputBorderbottom="56vw solid #36dbf8"
+                    <Square inputWidth="18vw" inputBorderbottom="60vw solid #36dbf8"
                     ></Square>
                     <NameLength>落合　陽一</NameLength>
                     <NameWidth>Yoichi　Ochiai</NameWidth>
@@ -13,8 +13,8 @@ const Speaker:FC = () => {
                     <Date1>at TOHO</Date1>
                 </Position> 
                 <BackgroundImage src="/speakerbackground.png"></BackgroundImage>                   
-                <div> 
-                    {/* <ImageSpeaker src="../public/speaker.png"></ImageSpeaker> */}
+                <Position> 
+                    <ImageSpeaker src="/speaker.JPG"></ImageSpeaker>
                   <SpeakerDetail>東京港区六本木生まれ六本木育ち，六本木中学卒業 , 開成高校
                                         卒業 , 筑波大学情報学群情報メディア創成学類卒業，東京大学
                                         大学院学際情報学府博士課程早期終了．計算機自然という新た
@@ -39,7 +39,7 @@ const Speaker:FC = () => {
 応用研究に従事 , またメディアアーティストとして様々な個展
 やコラボレーションを行う．自身のテレビ番組やネット番組等
 でも精力的に発信している .</SpeakerDetail>
-                </div>
+                </Position>
         </BackGround>
     )
 }
@@ -67,12 +67,18 @@ padding:0 0 5vw 0;
 
 const ImageSpeaker = styled.img`
 z-index:10;
-width:100%;
-height:100%;
-position:absolute;
+width:512px;
+height:768px;
+margin:0vw 0 3vw 5vw ;
+float:left;
+@media only screen and (max-width: 1555px) {
+width:35.9%;
+height:57.6%;
+}
 `
 
 const Square = styled.div<InputSquare>`
+margin:0 0 0 5vw;
 &::after {
     content: "";
     display: block;
@@ -97,7 +103,7 @@ color:white;
 margin:5vw 0 0 83vw;
 `
 
-const NameLength = styled.nav`
+const NameLength = styled.h2`
 float:left;
 position:absolute;
 -ms-writing-mode: tb-rl;
@@ -106,12 +112,12 @@ z-index:4;
 height:40vw;
 font-size:8vw;
 font-weight:bold;
-margin: 5vw 0 0 5vw;
+margin: 7vw 0 0 10vw;
 `
 
-const NameWidth = styled.span`
+const NameWidth = styled.ruby`
 position:absolute;
-margin:17vw 0 0 -12vw;
+margin:18vw 0 0 -8vw;
 z-index:5;
 transform:rotate(-90deg);
 height:15vw;
@@ -137,7 +143,7 @@ const SpeakerDetail = styled.p`
 border-radius:20px;
 border: solid 10px white;
 background-color: white;
-margin: 5vw 5vw 5vw 45vw;
+margin: 8vw 5vw 5vw 45vw;
 padding:10px 10px 10px 10px;
 `
 
